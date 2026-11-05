@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="鲸历图标">
+  <defs>
+    <linearGradient id="bg" x1="70" y1="40" x2="440" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6786ff"/>
+      <stop offset="0.52" stop-color="#4d6bfe"/>
+      <stop offset="1" stop-color="#2f49ce"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(156 106) rotate(48) scale(370)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#b8e9ff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#b8e9ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="whale" x1="160" y1="165" x2="360" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dcecff"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="128" fill="url(#glow)"/>
+  <path d="M-20 424c88-51 158-42 232-4s163 37 320-30v150H-20Z" fill="#ffffff" opacity="0.06"/>
+  <path d="M44 388c92-45 151-33 224 7s167 34 286-24" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.12"/>
+
+  <!-- whale tail -->
+  <path d="M361 277c29-8 45-30 52-57 4-15 17-18 25-5 11 19 12 40 4 59 12 5 18 17 20 31 2 17-9 25-23 18-17-9-30-18-47-23-11-4-21-7-31-9Z" fill="#ffffff"/>
+  <!-- body -->
+  <path d="M99 278c0-69 59-113 146-113s144 42 156 101c11 55-30 101-100 116-80 17-160-11-187-58-9-15-15-30-15-46Z" fill="url(#whale)"/>
+  <!-- face -->
+  <ellipse cx="208" cy="260" rx="16" ry="22" fill="#27356e"/>
+  <ellipse cx="296" cy="254" rx="16" ry="22" fill="#27356e"/>
+  <circle cx="203" cy="252" r="5.5" fill="#ffffff"/>
+  <circle cx="291" cy="246" r="5.5" fill="#ffffff"/>
+  <path d="M236 289c8 10 23 11 33 0" fill="none" stroke="#27356e" stroke-width="4.5" stroke-linecap="round"/>
+  <ellipse cx="167" cy="289" rx="15" ry="8" fill="#ff9fbc" opacity="0.6"/>
+  <ellipse cx="337" cy="283" rx="15" ry="8" fill="#ff9fbc" opacity="0.6"/>
+  <!-- cap -->
+  <path d="M226 168c16 8 35 8 51 0v14c-16 10-35 10-51 0Z" fill="#324176"/>
+  <path d="M188 156l63-27 63 27-63 27Z" fill="#253165"/>
+  <path d="M218 159l33-14 33 14-33 14Z" fill="#4d6bfe" opacity="0.8"/>
+  <circle cx="251" cy="141" r="5" fill="#9fe7ff"/>
+  <path d="M314 159c14 4 20 15 21 31" fill="none" stroke="#253165" stroke-width="4" stroke-linecap="round"/>
+  <path d="M334 188l3 17 10-2-3-17Z" fill="#ffd47a"/>
+  <!-- bubbles -->
+  <circle cx="88" cy="204" r="7" fill="none" stroke="#dff3ff" stroke-width="4" opacity="0.65"/>
+  <circle cx="65" cy="177" r="4" fill="none" stroke="#dff3ff" stroke-width="3.5" opacity="0.5"/>
+  <path d="M417 149l3.5 9 9 3.5-9 3.5-3.5 9-3.5-9-9-3.5 9-3.5Z" fill="#d7f6ff" opacity="0.9"/>
+</svg>

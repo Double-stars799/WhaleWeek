@@ -1,0 +1,18 @@
+{
+  "name": "whale-week",
+  "version": "1.0.0",
+  "private": true,
+  "description": "鲸历 · 蓝鲸周计划，一个安静、无依赖的本地课表式计划应用。",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "start:open": "node scripts/serve.mjs --open"
+  },
+  "keywords": [
+    "timetable",
+    "weekly-planner",
+    "pwa",
+    "whale",
+    "deepseek"
+  ],
+  "license": "MIT"
+}

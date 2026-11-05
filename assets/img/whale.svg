@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 460" width="560" height="460" role="img" aria-label="戴着学士帽的蓝色胖鲸鱼">
+  <defs>
+    <linearGradient id="body" x1="150" y1="110" x2="390" y2="365" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7b9bff"/>
+      <stop offset="0.45" stop-color="#5475ff"/>
+      <stop offset="1" stop-color="#3a57e7"/>
+    </linearGradient>
+    <linearGradient id="belly" x1="280" y1="255" x2="280" y2="382" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f5fbff" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#c3e2ff" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="fin" x1="200" y1="300" x2="230" y2="365" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6484ff"/>
+      <stop offset="1" stop-color="#3d5ce9"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="220" y1="70" x2="320" y2="135" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3b4e9c"/>
+      <stop offset="1" stop-color="#202c5e"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-40%" width="160%" height="180%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <filter id="eyeShadow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+  </defs>
+
+  <!-- ground shadow -->
+  <ellipse cx="283" cy="420" rx="164" ry="14" fill="#1d3bc8" opacity="0.16" filter="url(#softShadow)"/>
+
+  <!-- tail -->
+  <g stroke="#24316b" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M403 232C437 225 457 197 465 163c4-15 18-18 26-5 13 21 15 46 4 68 15 4 25 18 28 36 3 20-9 30-25 23-20-9-35-21-55-27-13-4-26-8-40-11Z" fill="#4b6cff"/>
+  </g>
+  <!-- tail grooves -->
+  <path d="M447 214c8-13 12-28 12-42M472 271c10-2 19-9 24-19" fill="none" stroke="#24316b" stroke-width="4" stroke-linecap="round" opacity="0.28"/>
+
+  <!-- dorsal fin -->
+  <path d="M297 128c7-33 27-52 51-46-12 15-10 34 7 49Z" fill="#3f5cec" stroke="#24316b" stroke-width="6" stroke-linejoin="round"/>
+
+  <!-- body -->
+  <path d="M96 236c-5-78 64-127 157-127 93 0 160 46 177 108 16 60-30 116-111 135-89 21-181-8-210-62-9-17-13-36-13-54Z" fill="url(#body)" stroke="#24316b" stroke-width="6" stroke-linejoin="round"/>
+
+  <!-- forehead highlight -->
+  <path d="M136 188c27-40 76-63 128-65" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round" opacity="0.16"/>
+
+  <!-- belly -->
+  <path d="M124 257c36 62 137 101 228 80 42-10 71-31 88-58-1 39-41 75-104 90-91 21-175-19-205-96Z" fill="url(#belly)"/>
+  <path d="M130 271c42 53 125 81 204 68 48-8 85-29 105-57" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- front flipper -->
+  <path d="M205 300c-13 27-3 53 23 64 12-18 14-42 4-65Z" fill="url(#fin)" stroke="#24316b" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M218 320c-2 12 1 23 7 32" fill="none" stroke="#24316b" stroke-width="3.5" stroke-linecap="round" opacity="0.25"/>
+
+  <!-- tiny side flipper -->
+  <path d="M396 290c18 6 31 19 34 35-14 7-32 3-45-10Z" fill="#4969f6" stroke="#24316b" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- face -->
+  <g>
+    <ellipse cx="211" cy="222" rx="19" ry="25" fill="#1f2b54"/>
+    <ellipse cx="305" cy="216" rx="19" ry="25" fill="#1f2b54"/>
+    <circle cx="205" cy="213" r="6.5" fill="#ffffff" opacity="0.95"/>
+    <circle cx="299" cy="207" r="6.5" fill="#ffffff" opacity="0.95"/>
+    <circle cx="217" cy="234" r="2.8" fill="#ffffff" opacity="0.55"/>
+    <circle cx="311" cy="228" r="2.8" fill="#ffffff" opacity="0.55"/>
+    <ellipse cx="170" cy="254" rx="18" ry="10" fill="#ff9fbc" opacity="0.45"/>
+    <ellipse cx="345" cy="247" rx="18" ry="10" fill="#ff9fbc" opacity="0.45"/>
+    <path d="M245 250c8 11 24 12 34 1" fill="none" stroke="#24316b" stroke-width="4.2" stroke-linecap="round"/>
+    <path d="M257 260c4 3 9 3 13 0" fill="none" stroke="#24316b" stroke-width="3" stroke-linecap="round" opacity="0.32"/>
+    <path d="M191 268c-2 5 0 9 4 11M326 260c2 5 0 9-4 11" fill="none" stroke="#24316b" stroke-width="2.2" stroke-linecap="round" opacity="0.32"/>
+  </g>
+
+  <!-- graduation cap -->
+  <g transform="rotate(-5 253 98)">
+    <path d="M226 106c18 9 39 9 57 0v17c-18 12-39 12-57 0Z" fill="#2b3a7e" stroke="#24316b" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M186 91 253 62l67 29-67 29Z" fill="url(#cap)" stroke="#24316b" stroke-width="5.5" stroke-linejoin="round"/>
+    <path d="M217 94l36-15.5 36 15.5-36 15.5Z" fill="#4d6bfe" opacity="0.7"/>
+    <circle cx="253" cy="76" r="5.5" fill="#9fe7ff" stroke="#24316b" stroke-width="3"/>
+    <path d="M319 95c17 4 23 18 24 36" fill="none" stroke="#24316b" stroke-width="4" stroke-linecap="round"/>
+    <path d="M340 127l4 20 12-3-4-20Z" fill="#ffd47a" stroke="#24316b" stroke-width="3.5" stroke-linejoin="round"/>
+  </g>
+
+  <!-- bubbles and sparkles -->
+  <g fill="none" stroke="#dff3ff" stroke-width="4" opacity="0.78">
+    <circle cx="101" cy="169" r="8"/>
+    <circle cx="82" cy="134" r="4.5"/>
+    <circle cx="118" cy="107" r="3"/>
+  </g>
+  <g fill="#c9f0ff" opacity="0.9">
+    <path d="M430 103l3.5 9 9 3.5-9 3.5-3.5 9-3.5-9-9-3.5 9-3.5Z"/>
+    <path d="M467 135l2.2 5.6 5.6 2.2-5.6 2.2-2.2 5.6-2.2-5.6-5.6-2.2 5.6-2.2Z" opacity="0.7"/>
+  </g>
+</svg>

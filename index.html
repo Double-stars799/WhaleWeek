@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>鲸历 · 把一周，游成喜欢的样子</title>
+  <meta name="description" content="鲸历是一款安静、好用的每周计划表。点空白添加，拖动调整时间，数据只保存在你的浏览器里。">
+  <meta name="theme-color" content="#4d6bfe">
+  <meta name="color-scheme" content="light">
+  <meta name="application-name" content="鲸历">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="鲸历">
+  <meta property="og:title" content="鲸历 · 蓝鲸周计划">
+  <meta property="og:description" content="把一周，游成喜欢的样子。点空白添加计划，数据只留在本地。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/og-cover.png">
+  <link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-plus" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-database" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="5.5" rx="7.5" ry="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M4.5 5.5v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6M4.5 11.5v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24">
+      <rect x="3.5" y="5" width="17" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M7.5 3v4M16.5 3v4M3.5 9.5h17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="8.5" cy="13.5" r="1.1" fill="currentColor"/>
+      <circle cx="12" cy="13.5" r="1.1" fill="currentColor"/>
+      <circle cx="15.5" cy="17" r="1.1" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24">
+      <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M12 21s7-5.67 7-12a7 7 0 1 0-14 0c0 6.33 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="12" cy="9" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 24 24">
+      <path d="M12 3.5v11M7.5 10.5l4.5 4.5 4.5-4.5M4.5 19.5h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24">
+      <path d="M12 15.5v-11M7.5 8.5 12 4l4.5 4.5M4.5 19.5h15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-printer" viewBox="0 0 24 24">
+      <path d="M7 9V3.5h10V9M7 17H4.5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h15a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="7" y="13" width="10" height="7.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="17.5" cy="11" r=".9" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24">
+      <path d="M4 6.5h16M9 6.5V4h6v2.5M6.5 6.5l1 13h9l1-13M10 10.5v5M14 10.5v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24">
+      <rect x="3" y="4" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M8 21h8M12 17v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="m5 12.5 4.5 4.5L19 6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-undo" viewBox="0 0 24 24">
+      <path d="M4.5 9.5h9a5.5 5.5 0 0 1 0 11H9M4.5 9.5 9 5M4.5 9.5 9 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <div class="page">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="./" aria-label="鲸历首页">
+          <img class="brand-mark" src="assets/img/icon.svg" width="38" height="38" alt="">
+          <span class="brand-text">
+            <span class="brand-name">鲸历</span>
+            <span class="brand-sub">WHALE WEEK</span>
+          </span>
+        </a>
+
+        <div class="topbar-date" id="topbarDate">
+          <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+          <span id="topbarDateText">今天</span>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="btn btn-ghost" id="dataBtn" type="button" aria-haspopup="dialog">
+            <svg class="icon" aria-hidden="true"><use href="#i-database"/></svg>
+            <span class="btn-label">数据与备份</span>
+          </button>
+          <button class="btn btn-primary" id="addBtn" type="button">
+            <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg>
+            <span>添加计划</span>
+            <kbd class="key-hint">N</kbd>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            <span id="eyebrowDate">YOUR WEEK</span>
+          </p>
+          <h1 id="heroTitle">
+            <span id="greetingLead">下午好呀，</span><br>
+            <span class="hero-accent" id="greetingLine">今天也慢慢来。</span>
+          </h1>
+          <p class="hero-summary" id="heroSummary">今天还没有安排。空着也很好，或者放进一件想做的事。</p>
+          <div class="next-up" id="nextUp" hidden>
+            <span class="next-up-dot" aria-hidden="true"></span>
+            <span id="nextUpText"></span>
+          </div>
+          <dl class="hero-stats">
+            <div class="hero-stat">
+              <dt>今日计划</dt>
+              <dd id="statTodayCount">0</dd>
+            </div>
+            <div class="hero-stat">
+              <dt>今日时长</dt>
+              <dd id="statTodayTime">0<small>h</small></dd>
+            </div>
+            <div class="hero-stat">
+              <dt>本周计划</dt>
+              <dd id="statWeekCount">0</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="sea-blob"></div>
+          <div class="art-ring art-ring-a"></div>
+          <div class="art-ring art-ring-b"></div>
+          <span class="art-bubble bubble-a"></span>
+          <span class="art-bubble bubble-b"></span>
+          <span class="art-bubble bubble-c"></span>
+          <span class="art-spark spark-a">✦</span>
+          <span class="art-spark spark-b">✦</span>
+          <img class="whale-hero" src="assets/img/whale.svg" width="560" height="440" alt="">
+          <div class="today-float">
+            <span class="today-float-label">TODAY</span>
+            <div class="today-float-main">
+              <strong id="artTodayCount">0</strong>
+              <span>件小事</span>
+            </div>
+            <span class="today-float-line"></span>
+            <span class="today-float-foot" id="artTodayFoot">海面很安静</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="schedule-card" aria-labelledby="scheduleTitle">
+        <div class="schedule-head">
+          <div class="schedule-heading">
+            <div class="schedule-title-line">
+              <h2 id="scheduleTitle">我的周计划</h2>
+              <span class="week-pill">每周重复</span>
+            </div>
+            <p class="week-range" id="weekRange">本周</p>
+          </div>
+          <div class="schedule-tools">
+            <button class="text-btn" id="nowBtn" type="button">
+              <span class="now-btn-dot" aria-hidden="true"></span>
+              回到今天
+            </button>
+          </div>
+        </div>
+
+        <div class="filter-row" id="filterRow" role="group" aria-label="按分类筛选计划"></div>
+
+        <div class="mobile-day-tabs" id="mobileDayTabs" role="group" aria-label="选择星期"></div>
+
+        <div class="timetable-wrap">
+          <div class="timetable" id="timetable"></div>
+          <div class="empty-state" id="emptyState" hidden>
+            <div class="empty-illustration">
+              <span class="empty-bubble empty-bubble-a"></span>
+              <span class="empty-bubble empty-bubble-b"></span>
+              <img src="assets/img/whale.svg" width="190" height="156" alt="">
+            </div>
+            <h3>这一周还空着</h3>
+            <p>从一节课、一次自习，或者一场散步开始。</p>
+            <button class="btn btn-primary" id="emptyAddBtn" type="button">
+              <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg>
+              添加第一个计划
+            </button>
+          </div>
+        </div>
+
+        <div class="schedule-foot">
+          <p class="usage-tip">
+            <span class="usage-tip-strong">点空白添加</span>
+            <span class="tip-sep" aria-hidden="true">·</span>
+            <span>拖卡片改时间</span>
+            <span class="tip-sep" aria-hidden="true">·</span>
+            <span>点卡片编辑</span>
+          </p>
+          <p class="save-state" id="saveState">
+            <span class="save-dot" aria-hidden="true"></span>
+            已自动保存
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        <img src="assets/img/icon.svg" width="18" height="18" alt="">
+        <span>鲸历 · 计划只留在这台设备里，不上传、不打扰、没有声音。</span>
+      </p>
+      <span class="footer-version">v1.0.0</span>
+    </footer>
+  </div>
+
+  <dialog class="sheet" id="planDialog" aria-labelledby="planDialogTitle">
+    <form class="sheet-card" id="planForm" novalidate>
+      <div class="sheet-head">
+        <div>
+          <p class="sheet-kicker">PLAN</p>
+          <h2 id="planDialogTitle">添加计划</h2>
+        </div>
+        <button class="icon-btn" type="button" data-close-dialog aria-label="关闭">
+          <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+
+      <div class="sheet-body">
+        <label class="field">
+          <span class="field-label">计划名称 <em>*</em></span>
+          <input id="planTitle" name="title" type="text" maxlength="40" placeholder="比如：高等数学、项目讨论、夜跑" autocomplete="off" required>
+        </label>
+
+        <div class="form-grid">
+          <label class="field">
+            <span class="field-label">星期</span>
+            <select id="planDay" name="day"></select>
+          </label>
+          <label class="field">
+            <span class="field-label">地点</span>
+            <input id="planLocation" name="location" type="text" maxlength="40" placeholder="可选，如 A3-201" autocomplete="off">
+          </label>
+        </div>
+
+        <div class="field">
+          <span class="field-label">时间 <em>*</em></span>
+          <div class="time-row">
+            <label class="time-box">
+              <span>开始</span>
+              <input id="planStart" name="start" type="time" step="900" min="07:00" max="23:00" required>
+            </label>
+            <span class="time-arrow" aria-hidden="true">
+              <svg class="icon"><use href="#i-arrow-right"/></svg>
+            </span>
+            <label class="time-box">
+              <span>结束</span>
+              <input id="planEnd" name="end" type="time" step="900" min="07:00" max="23:00" required>
+            </label>
+          </div>
+          <div class="quick-durations" aria-label="快速设置时长">
+            <button type="button" data-duration="30">30 分钟</button>
+            <button type="button" data-duration="60">1 小时</button>
+            <button type="button" data-duration="90">1.5 小时</button>
+            <button type="button" data-duration="120">2 小时</button>
+          </div>
+        </div>
+
+        <fieldset class="field category-field">
+          <legend class="field-label">分类</legend>
+          <div class="category-options" id="categoryOptions"></div>
+        </fieldset>
+
+        <label class="field">
+          <span class="field-label">备注</span>
+          <textarea id="planNote" name="note" rows="3" maxlength="200" placeholder="可选：带上教材、会议室号、要准备的东西…"></textarea>
+        </label>
+
+        <p class="form-error" id="formError" role="alert" hidden></p>
+      </div>
+
+      <div class="sheet-actions">
+        <button class="btn btn-danger-ghost" id="deletePlanBtn" type="button" hidden>
+          <svg class="icon" aria-hidden="true"><use href="#i-trash"/></svg>
+          删除
+        </button>
+        <div class="sheet-actions-right">
+          <button class="btn btn-ghost" type="button" data-close-dialog>取消</button>
+          <button class="btn btn-primary" id="savePlanBtn" type="submit">添加计划</button>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="sheet" id="dataDialog" aria-labelledby="dataDialogTitle">
+    <div class="sheet-card">
+      <div class="sheet-head">
+        <div>
+          <p class="sheet-kicker">YOUR DATA</p>
+          <h2 id="dataDialogTitle">数据与备份</h2>
+        </div>
+        <button class="icon-btn" type="button" data-close-dialog aria-label="关闭">
+          <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+
+      <div class="sheet-body">
+        <p class="sheet-copy">你的计划只保存在当前浏览器的本地存储里，不会上传到任何服务器。换设备或清理浏览器前，记得导出一份备份。</p>
+
+        <div class="data-actions">
+          <button class="data-action" id="exportBtn" type="button">
+            <span class="data-action-icon"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg></span>
+            <span class="data-action-text">
+              <strong>导出备份</strong>
+              <small>下载一个 JSON 文件，随时带走</small>
+            </span>
+            <svg class="icon data-action-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </button>
+
+          <button class="data-action" id="importBtn" type="button">
+            <span class="data-action-icon"><svg class="icon" aria-hidden="true"><use href="#i-upload"/></svg></span>
+            <span class="data-action-text">
+              <strong>导入备份</strong>
+              <small>从之前下载的 JSON 恢复计划</small>
+            </span>
+            <svg class="icon data-action-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </button>
+
+          <button class="data-action" id="printBtn" type="button">
+            <span class="data-action-icon"><svg class="icon" aria-hidden="true"><use href="#i-printer"/></svg></span>
+            <span class="data-action-text">
+              <strong>打印课表</strong>
+              <small>建议在打印设置里选择横向</small>
+            </span>
+            <svg class="icon data-action-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </button>
+
+          <button class="data-action" id="installBtn" type="button" hidden>
+            <span class="data-action-icon"><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg></span>
+            <span class="data-action-text">
+              <strong>安装到桌面</strong>
+              <small>像普通软件一样打开，离线也能用</small>
+            </span>
+            <svg class="icon data-action-arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </button>
+        </div>
+
+        <div class="data-note">
+          <span class="data-note-mark" aria-hidden="true">✦</span>
+          <p>没有任何声音，也没有联网请求。安静地排好一周，是它能做的全部。</p>
+        </div>
+
+        <button class="clear-all-btn" id="clearAllBtn" type="button">
+          <svg class="icon" aria-hidden="true"><use href="#i-trash"/></svg>
+          清空所有计划
+        </button>
+      </div>
+
+      <div class="sheet-actions sheet-actions-simple">
+        <span class="about-version">鲸历 WhaleWeek · v1.0.0</span>
+        <button class="btn btn-ghost" type="button" data-close-dialog>完成</button>
+      </div>
+    </div>
+  </dialog>
+
+  <input type="file" id="importFile" accept="application/json,.json" hidden>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+    <span class="toast-icon" id="toastIcon" aria-hidden="true">
+      <svg class="icon"><use href="#i-check"/></svg>
+    </span>
+    <span class="toast-message" id="toastMessage"></span>
+    <button class="toast-action" id="toastAction" type="button" hidden>撤销</button>
+  </div>
+
+  <noscript>
+    <div class="noscript">鲸历需要 JavaScript 才能运行。请在浏览器设置中开启 JavaScript 后再打开。</div>
+  </noscript>
+</body>
+</html>
